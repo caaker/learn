@@ -1,3 +1,5 @@
+// https://stackoverflow.com/questions/2552483/why-does-the-month-argument-range-from-0-to-11-in-javascripts-date-constructor
+
 function firstDayOfMonth(date) {
   return new Date(date.getFullYear(), date.getMonth(), 1)
 }
