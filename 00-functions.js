@@ -13,7 +13,7 @@ const funcArrow = (a) => {
   return a;
 };
 
-// reduced arrow function expression
+// reduced arrow function expression will return argument a
 const funcArrowReduced = a => a;
 
 // functions have arguments built in
@@ -30,8 +30,7 @@ function funcThis() {
 const funcChained = moo => foo => moo + foo;
 const func2 = funcChained('moo');
 
-/*
-**  test
-*/
-
-// console.log(func2('foo'));
+// functions can have added properties
+function funcProp() {
+}
+funcProp.arg0 = 'arg0';
