@@ -55,8 +55,7 @@ class BinaryTree {
   // what order is this?
   dfIterative() {
     const stack = [];
-    stack.push(this.root);
-    let iter = stack.pop();
+    let iter = this.root;
     while(iter) {
       if(iter.right) {
         stack.push(iter.right);
@@ -82,6 +81,7 @@ Time Complexity
 Notes | Links
 --------------------
 https://www.cs.usfca.edu/~galles/visualization/DFS.html
+https://www.youtube.com/watch?v=fKgZiCXb6zs
 
 */
 

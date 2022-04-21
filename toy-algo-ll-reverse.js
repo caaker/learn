@@ -20,10 +20,14 @@ class LinkedList {
   reverse() {
     let previous;
     let iter = this.first;
+
+    // the
     while(iter) {
       let next = iter.next;
+
       iter.next = previous;
       previous = iter;
+
       iter = next;
     }
     this.swap();

@@ -1,9 +1,7 @@
-const n = 5;
-const res = factorialR(n);
+const n = 3;
+const res = factorial(n);
 console.log('Factorial value for ' + n + ' is ' + res);
 
-// Iterative
-// linear - O(n)
 function factorial(n) {
   if(n === 0 || n === 1 ) {
     return 1;
@@ -15,10 +13,6 @@ function factorial(n) {
   return value;
 }
 
-// Recursive
-// linear - O(n)
-// essentially behaves as a while loop
-// is there additional overhead for a function?
 function factorialR(n) {
   if( n === 0 || n === 1 ) {
     return 1;
@@ -30,7 +24,7 @@ function factorialR(n) {
 
 /*
 
-Notes
+Notes | Time Complexity
 --------------------
 Factorial is defined recursively as fact(n) = n * fact(n - 1) and follows this pattern:
 0! = 1
@@ -39,6 +33,8 @@ Factorial is defined recursively as fact(n) = n * fact(n - 1) and follows this p
 3! = 6
 4! = 24
 5! = 120
+
+Both recursive and iterative functions show a time complexity of O(n)
 
 Links
 --------------------

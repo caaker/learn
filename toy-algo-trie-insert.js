@@ -1,7 +1,7 @@
 // implementation of insertWord for a trie
 class Node {
   constructor() {
-    this.next = {};
+    this.letters = {};
     this.end = false;
   }
 }
@@ -14,13 +14,13 @@ class Trie {
     let iter = this.root;
     for(let i = 0; i < word.length; i++) {
       const char = word[i];
-      if(!iter.next[char]) {
-        iter.next[char] = new Node();
+      if(!iter.letters[char]) {
+        iter.letters[char] = new Node();
       }
       if( i === (word.length - 1)) {
-        iter.next[char].end = true;
+        iter.letters[char].end = true;
       }
-      iter = iter.next[char];
+      iter = iter.letters[char];
     }
   }
 }
@@ -28,6 +28,6 @@ class Trie {
 const trie = new Trie();
 trie.insertWord('dog');
 console.log(trie);
-console.log(trie.root.next.d);
-console.log(trie.root.next.d.next.o);
-console.log(trie.root.next.d.next.o.next.g);
+console.log(trie.root.letters.d);
+console.log(trie.root.letters.d.letters.o);
+console.log(trie.root.letters.d.letters.o.letters.g);
