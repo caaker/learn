@@ -26,10 +26,6 @@ function funcThis() {
   return 'title: ' + this.process.title + '\n' + 'version: ' + this.process.version;
 }
 
-// chained arrow functions
-const funcChained = moo => foo => moo + foo;
-const func2 = funcChained('moo');
-
 // functions can have added properties
 function funcProp() {
 }

@@ -1,7 +1,3 @@
-const n = 3;
-const res = factorial(n);
-console.log('Factorial value for ' + n + ' is ' + res);
-
 function factorial(n) {
   if(n === 0 || n === 1 ) {
     return 1;
@@ -21,6 +17,7 @@ function factorialR(n) {
   }
 }
 
+console.log(factorial(3));
 
 /*
 

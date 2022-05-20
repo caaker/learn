@@ -21,9 +21,7 @@ function fiboR(n) {
   }
 }
 
-const n = 8;
-const res = fibo(n);
-console.log('Fibonacci value for ' + n + ' is ' + res);
+console.log(fibo(8));
 
 /*
 

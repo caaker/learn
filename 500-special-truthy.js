@@ -15,6 +15,7 @@ function isTruthy1(test) {
 }
 
 // faslsy values
+console.log('Falsy', '\n');
 console.log(isTruthy1(null));
 console.log(isTruthy1(undefined));
 console.log(isTruthy1(false));
@@ -27,6 +28,7 @@ console.log(isTruthy1(''));
 console.log(isTruthy1(``));
 
 // truthy values
+console.log('\n', 'Truthy');
 console.log(isTruthy1(' '));
 console.log(isTruthy1([]));
 console.log(isTruthy1({}));

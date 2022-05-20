@@ -1,33 +1,100 @@
-// implementation of insertWord for a trie
+// helper
+function isEmpty() {
+  return Object.keys(obj).length === 0;
+}
+
 class Node {
   constructor() {
+
+    // we have a hash with key type letter and value type node
     this.letters = {};
+
+    // this marks the last letter of a word
     this.end = false;
   }
 }
 
 class Trie {
+
+  // a trie consists of at least one node
   constructor() {
     this.root = new Node();
   }
+
+  // insert one word
   insertWord(word) {
-    let iter = this.root;
+    let node = this.root;
     for(let i = 0; i < word.length; i++) {
       const char = word[i];
-      if(!iter.letters[char]) {
-        iter.letters[char] = new Node();
+      if(!node.letters[char]) {
+        node.letters[char] = new Node();
       }
       if( i === (word.length - 1)) {
-        iter.letters[char].end = true;
+        node.letters[char].end = true;
       }
-      iter = iter.letters[char];
+      node = node.letters[char];
     }
   }
+
+  printNodes() {
+    function recurse(letters) {
+
+      // recurse
+      if(letters) {
+        Object.keys(letters).forEach((key) => {
+          console.log(key, letters[key]);
+          recurse(letters[key].letters)
+        });
+      }
+    }
+
+    recurse(this.root.letters);
+
+  }
+
+
 }
 
 const trie = new Trie();
+trie.insertWord('cat');
+trie.insertWord('catty');
 trie.insertWord('dog');
-console.log(trie);
-console.log(trie.root.letters.d);
-console.log(trie.root.letters.d.letters.o);
-console.log(trie.root.letters.d.letters.o.letters.g);
+trie.insertWord('doggy');
+trie.insertWord('bat');
+trie.insertWord('batty');
+
+trie.printNodes();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log(trie);
+// console.log(trie.root.letters.d);
+// console.log(trie.root.letters.d.letters.o);
+// console.log(trie.root.letters.d.letters.o.letters.g);
+

@@ -1,3 +1,5 @@
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
 function firstDayOfMonth(date) {
   return new Date(date.getFullYear(), date.getMonth(), 1)
 }

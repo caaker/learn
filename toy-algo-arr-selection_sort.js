@@ -20,3 +20,11 @@ function selectionSort(arr) {
 
 const test = [3, 2, 1, 0];
 console.log(selectionSort(test));
+
+/*
+
+Time Complexity
+--------------------
+O(n^2)
+
+*/

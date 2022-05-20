@@ -6,14 +6,13 @@ class Node {
   }
 }
 
-// learn default arg
 class BinaryTree {
   constructor(data) {
     this.root = new Node(data || 0);
   }
 
   makeTree() {
-    this.insert(15);this.insert(5);this.insert(7);this.insert(3);this.insert(20);this.insert(13);
+    this.insert(3);this.insert(2);this.insert(4);this.insert(10);this.insert(7);this.insert(15)
   }
 
   insert(data) {
@@ -42,33 +41,39 @@ class BinaryTree {
       if(node === null) {
         return node;
       }
+
       // pre order
+      console.log(node.data);
       recurse(node.left);
+
       // in order
       recurse(node.right);
+
       // post order
 
     }
     recurse(this.root);
   }
 
-  // what order is this?
-  dfIterative() {
+  // this iterative version is always pre-order
+  dfi() {
     const stack = [];
     let iter = this.root;
     while(iter) {
+      // pre-order
       if(iter.right) {
         stack.push(iter.right);
       }
       if(iter.left) {
         stack.push(iter.left);
       }
+      // post-order
       iter = stack.pop();
     }
   }
 }
 
-const tree = new BinaryTree(10);
+const tree = new BinaryTree(5);
 tree.makeTree();
 tree.df();
 

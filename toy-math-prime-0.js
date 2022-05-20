@@ -14,15 +14,21 @@ function prime(n) {
         continue not_a_prime;
       }
     }
+
+    // no factors found, it's a prime, save it
     primes.push(i);
   }
   return primes;
 }
 
-const res = prime(50);
-console.log(res);
+console.log(prime(50));
 
 /*
+
+Question
+--------------------
+Find primes up to n.
+
 
 Time Complexity
 --------------------

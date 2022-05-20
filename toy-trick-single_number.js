@@ -1,8 +1,3 @@
-// let res = findSingle([1, 1, 2, 4, 2, 3, 3]);
-// console.log(res);
-
-
-// exclusive or
 function findSingle(arr) {
   let res = 0;
   for(let i = 0; i < arr.length; i++) {
@@ -11,8 +6,10 @@ function findSingle(arr) {
   return res;
 }
 
-const test = [2, 2, 3, 4, 3];
-console.log(2 ^ 2 ^ 3 ^ 4 ^ 3)
+// const test = [2, 2, 3, 4, 3];
+// console.log(2 ^ 2 ^ 3 ^ 4 ^ 3)
+
+console.log(findSingle([1, 1, 2, 4, 2, 3, 3]));
 
 /*
 

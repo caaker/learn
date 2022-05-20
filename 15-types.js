@@ -1,27 +1,28 @@
-const num = 1;
-const str = 'str';
-const arr = ['arr'];
-const obj = {obj: 'obj'};
+// 7 types
+const number = 1;
+const string = 'string';
+const array = ['array'];
+const hash = {hash: 'hash'};
 const fun = function() {};
 const nul = null;
 const und = undefined;
 
 // Note that only null and undefined will throw an error if you try to access a property on them.
-num.prop;
-str.prop;
-arr.prop;
-obj.prop;
+number.prop;
+string.prop;
+array.prop;
+hash.prop;
 fun.prop;
 // nul.prop;
 // und.prop;
 
-// Note that arr and nul are broken and both reported as objects
-// console.log(typeof num);
-// console.log(typeof str);
-// console.log(typeof obj);
+// Note that array and nul are broken and both reported as hash
+// console.log(typeof number);
+// console.log(typeof string);
+// console.log(typeof hash);
 // console.log(typeof fun);
 // console.log(typeof und);
-// console.log(typeof arr);
+// console.log(typeof array);
 // console.log(typeof nul);
 
 // we can replace the operator typeof with the function typeOf
@@ -32,17 +33,15 @@ function typeOf(test) {
     ret = 'array';
   } else if (test === null) {    // null fix
     ret = 'null';
-  } else {                       // number, string, object, function, undefined work correctly
+  } else {                       // number, string, hash, function, undefined work correctly
     ret = typeof test;
   }
-
-  // capitalize ? to differentiate between type and value?
   return ret;
 }
-console.log(typeOf(num));
-console.log(typeOf(str));
-console.log(typeOf(arr));
-console.log(typeOf(obj));
+console.log(typeOf(number));
+console.log(typeOf(string));
+console.log(typeOf(array));
+console.log(typeOf(hash));
 console.log(typeOf(fun));
 console.log(typeOf(nul));
 console.log(typeOf(und));

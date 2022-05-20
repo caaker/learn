@@ -19,4 +19,3 @@ function runVariables() {
 }
 runVariables();
 // console.log(c); // error, outside of function
-

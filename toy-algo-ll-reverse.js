@@ -1,35 +1,55 @@
 class Node {
-  constructor(val, next) {
+  constructor(val) {
     this.val = val;
-    this.next = next;
+    this.next = null;
   }
 }
 
 class LinkedList {
-  constructor(val) {
-    this.first = new Node(( val || 0 ));
-    this.last = this.first;
+
+  constructor(val = 0) {
+    let node = new Node(val);
+    this.first = node;
+    this.last = node;
   }
 
-  addToEnd(val) {
+  add(val = 0) {
     const node = new Node(val);
     this.last.next = node;
     this.last = node;
   }
 
+  make() {
+    ll.add(1);ll.add(2);ll.add(3);
+  }
+
+  print() {
+    let iter = this.first;
+    while(iter) {
+      console.log(iter.val);
+      iter = iter.next;
+    }
+  }
+
   reverse() {
     let previous;
     let iter = this.first;
-
-    // the
     while(iter) {
+
+      // next node
       let next = iter.next;
 
+      // iter.next will now point to the node behind it
       iter.next = previous;
+
+      // save the current node as previous for use in the next iteration
       previous = iter;
 
+      // move to the next node in the ll
       iter = next;
     }
+
+    // finally swap first and last pointer
     this.swap();
   }
 
@@ -39,23 +59,9 @@ class LinkedList {
     this.last = temp;
   }
 
-  print() {
-    let iter = this.first;
-    while(iter !== undefined) {
-      console.log(iter.val);
-      iter = iter.next;
-    }
-  }
-
 }
 
 let ll = new LinkedList();
-ll.addToEnd(1);
-ll.addToEnd(2);
-ll.addToEnd(3);
-// ll.print();
+ll.make();
 ll.reverse();
-ll.print();
-
-
-
+console.log(ll.print())
