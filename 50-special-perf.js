@@ -4,8 +4,10 @@ const startTime = performance.now()
 */
 
 
-
-
+// ~13
+for(let i = 0; i < 10000000; i++) {
+  i / 2;
+}
 
 
 /* CODE - END
@@ -34,3 +36,15 @@ for(let i = 0; i < 100000; i++) {
 for(let key in hash) {
   hash[key] = 1;
 }
+
+
+// ~13
+for(let i = 0; i < 10000000; i++) {
+  i >>> 1;
+}
+
+// ~13
+for(let i = 0; i < 10000000; i++) {
+  i / 2;
+}
+

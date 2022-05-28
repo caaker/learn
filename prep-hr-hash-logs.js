@@ -1,3 +1,5 @@
+
+
 const hash = {};
 
 function init(person1, person2) {
@@ -12,7 +14,7 @@ function init(person1, person2) {
 // array of strings
 function processLogs(logs, threshold) {
   for(let i = 0; i < logs.length; i++) {
-    let arr = logs[i].split(' ');
+    const arr = logs[i].split(' ');
     init(arr[0], arr[1]);
     if(arr[0] !== arr[1]) {
       hash[arr[0]] += 1;
@@ -24,17 +26,15 @@ function processLogs(logs, threshold) {
   let ret = [];
 
   Object.keys(hash).forEach((key, i) => {
-    const val = hash[key];
-    if(val >= threshold) {
+    if(hash[key] >= threshold) {
       ret.push(key);
     }
   });
 
-  console.log(hash);
   return ret.sort();
 }
 
-let arr = [
+const arr = [
   '1 2 50',
   '1 7 70',
   '1 3 20',
@@ -50,9 +50,11 @@ console.log(processLogs(arr, 2));
 
 Time Complexity
 --------------------
-  - O(n)
+  - O(n), as we must loop through the array one time, and loop through the hash table one time
 
 Notes | Links
 --------------------
+Takes an array of strings ( or string array have you) representing user to user financial transactions
+and finds users that exceed a number of transactions limit.
 
 */

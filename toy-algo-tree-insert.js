@@ -17,22 +17,30 @@ class BinaryTree {
   }
 
   insert(data) {
+    const node = new Node(data);
+
+    // base case
+    if(!this.root) {
+      this.root = node;
+      return node;
+    }
+
+    // iterate
     let iter = this.root;
-    let node = new Node(data);
     while(iter) {
       if(iter.left && (node.data < iter.data)) {
         iter = iter.left;
       }
       if(!iter.left && (node.data < iter.data)) {
         iter.left = node;
-        return;
+        return node;
       }
       if(iter.right && (node.data >= iter.data)) {
         iter = iter.right;
       }
       if(!iter.right && (node.data >= iter.data)) {
         iter.right = node;
-        return;
+        return node;
       }
     }
   }

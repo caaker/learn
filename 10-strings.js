@@ -1,3 +1,17 @@
+/* looping
+*/
+
+
+const str = 'i am a string';
+for(let i = 0; i < str.length; i++) {
+  console.log(str[i]);
+}
+
+
+/* rest
+*/
+
+
 // 3 types of string literals
 const string1 = 'single quote';
 const string2 = 'double quote';

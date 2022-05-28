@@ -1,7 +1,4 @@
-// use shorter names to keep typing to a minimal
-// use a while loop for flexibility, don't use forEach in coding problems
-// have paper and pen near by
-const repo = ['mobile', 'mouse', 'moneypot', 'monitor', 'mousepad'];
+const hold = ['mobile', 'mouse', 'moneypot', 'monitor', 'mousepad'];
 const query = 'mouse';
 
 const output = [
@@ -13,33 +10,78 @@ const output = [
 
 // must have at least two characters
 // must not return more than 3 hints
-// must be lowercase
-function searchSuggestions(repo, query) {
+function searchSuggestions(hold, query) {
   const matrix = [];
-
-  // sort repo
-  const sorted = repo.sort();
-  // console.log(sorted);
-
+  const sorted = hold.sort();
   for(let i = 1; i < query.length; i++) {
+
+    // sub will hold - mo, mou, mous, mouse
     let sub = query.slice(0, i + 1);
     let j = 1;
-    let count = 0;
+    let hints = 0;
     let arr = []
-    while(j < repo.length && count < 3 ) {
-      if(sub === repo[j].slice(0, i + 1)) {
-        console.log('match', sub, repo[j].slice(0, i + 1));
-        arr.push(repo[j]);
-        count++
+    while(j < hold.length && hints < 3 ) {
+      if(sub === hold[j].slice(0, i + 1)) {
+        arr.push(hold[j]);
+        hints++
       }
       j++;
     }
     matrix.push(arr);
   }
 
-  console.log(matrix);
-
   // return an array of arrays
   return matrix;
 }
-searchSuggestions(repo, query);
+console.log(searchSuggestions(hold, query));
+
+
+/*
+
+Time Complexity
+--------------------
+
+Notes | Links
+--------------------
+  - this problem suggest words as the user types, i.e. word completion
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+Time Complexity
+--------------------
+  - O(n)
+
+Notes | Links
+--------------------
+Takes and array of strings representing user to user financial transactions and finds
+users that exceed a number of transactions limit.
+
+*/

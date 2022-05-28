@@ -3,6 +3,7 @@
     [*] var has function scope and is disallowed in the google style guide all together
 */
 
+let cc = 'let-cc'
 function runVariables() {
   const aa = 'const-aa';
   let bb = 'let-bb';
@@ -12,6 +13,7 @@ function runVariables() {
     var c = 'var-c';
     console.log(aa);
     console.log(bb);
+    console.log(cc);
   }
   // console.log(a); // error, outside of block
   // console.log(b); // error, outside of block

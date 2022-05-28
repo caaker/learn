@@ -1,10 +1,10 @@
-/* Looping
+/* looping
 */
 
 
 const hash = {a:10, b:11, c:12};
 Object.keys(hash).forEach((key, i) => {
-  const val = hash[key];
+  console.log(hash[key]);
 });
 
 for(let key in hash) {
