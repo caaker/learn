@@ -1,7 +1,6 @@
 /* looping
 */
 
-
 const hash = {a:10, b:11, c:12};
 Object.keys(hash).forEach((key, i) => {
   console.log(hash[key]);
@@ -13,10 +12,8 @@ for(let key in hash) {
   }
 }
 
-
-/* isEmpty, Setting, Assigning
+/* isEmpty, setting, assigning
 */
-
 
 function isEmpty(obj) {
   return Object.keys(obj).length === 0;
@@ -36,10 +33,8 @@ const ref = hash2;
 hash2.a = 100;
 // console.log('ref: ', ref);
 
-
 /* Alternate - Hash Map
 */
-
 
 const users = new Map();
 users.set(1, 'billy');

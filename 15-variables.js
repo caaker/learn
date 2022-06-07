@@ -3,10 +3,12 @@
     [*] var has function scope and is disallowed in the google style guide all together
 */
 
-let cc = 'let-cc'
+const cc = 'let-cc';
 function runVariables() {
   const aa = 'const-aa';
-  let bb = 'let-bb';
+  const bb = 'let-bb';
+
+  // make a block scope
   if(true) {
     const a = 'const-a';
     let b = 'let-b';
