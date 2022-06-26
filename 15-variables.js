@@ -6,7 +6,7 @@
 const cc = 'let-cc';
 function runVariables() {
   const aa = 'const-aa';
-  const bb = 'let-bb';
+  let bb = 'let-bb';
 
   // make a block scope
   if(true) {
@@ -17,9 +17,9 @@ function runVariables() {
     console.log(bb);
     console.log(cc);
   }
-  // console.log(a); // error, outside of block
-  // console.log(b); // error, outside of block
-  console.log(c);
+  // console.log(a);  // error, outside of the block scope
+  // console.log(b);  // error, outside of the block scope
+  console.log(c);     // inside the function scope
 }
 runVariables();
-// console.log(c); // error, outside of function
+// console.log(c); // error, outside of the function scope

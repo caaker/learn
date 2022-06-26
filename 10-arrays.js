@@ -30,10 +30,10 @@ const splice1 = [0, 1, 2, 3];
 const splice2 = [0, 1, 2, 3];
 let res;
 
-// inserting - inserts 'a' at 2, and removes 0 values
+// inserts 'a' at index 2, and removes 0 items
 res = splice1.splice( 2, 0, 'a' );
 console.log(splice1, res);
 
-// inserting - inserts 'b' at 2 and removes index 2
+// inserts 'b' at index 2 and removes 1 item at index 2
 res = splice2.splice( 2, 1, 'b' );
 console.log(splice2, res);

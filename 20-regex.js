@@ -2,7 +2,7 @@
 const start =     '^';                   //                                                 start
 
 // some
-const protocol =  '(?:([A-Za-z]+):)?';   // 1                                               optional
+const protocol =  '(?:([A-Za-z]+):)?';   // 1                                               optional - does not capture the :
 const slash =     '(?:\\/{0,3})';        //                                                 not captured
 const domain =    '([0-9.\\-A-Za-z]+)';  // 2                                               required / captured
 

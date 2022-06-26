@@ -13,5 +13,5 @@ function makeAnchorHash(user_text) {
   return ret;
 };
 
-// test
-console.log(makeAnchorHash('foo.com/test/again?var=foo#works'));
+// normally used for a single url component, but for test purposes, give it a url
+console.log(makeAnchorHash('https://foo.com/test/again?var=foo#works'));

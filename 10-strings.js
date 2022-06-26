@@ -20,11 +20,12 @@ const string4 = string1 + string2;
 
 // slicing
 const first = string1.slice(0, 1);
-const last = string1.slice(( string1.length - 1 ));
+const last = string1.slice((string1.length - 1));
 
 // type conversion
 const number = parseInt('99');
+// console.log(typeof +'99')
 
 // ascii values for characters
-const ascii = 'z'.charCodeAt(0);
+const ascii = 'z'.charCodeAt(0); // a is 97, z is 122, for 26 letters
 console.log(ascii);

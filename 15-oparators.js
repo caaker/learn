@@ -9,6 +9,8 @@ const res2 = (1 === '1'); // evaluates to false
 const res3 = 1 + 4 * 4 / 4; // evaluates to 5
 // console.log(res3);
 
+console.log(1 + 4 * 4 / 4 ^ 2);
+
 // equality has precedence over logical operations, evaluates to true
 console.log( false === true || true );
 

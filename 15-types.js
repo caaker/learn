@@ -16,7 +16,7 @@ fun.prop;
 // nul.prop;
 // und.prop;
 
-// Note that array and nul are broken and both reported as hash
+// Note that array and null are broken
 // console.log(typeof number);
 // console.log(typeof string);
 // console.log(typeof hash);
