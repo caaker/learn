@@ -13,6 +13,7 @@
 const analyze = require('./analyze');
 const writeData = require('./analyze-writeData');
 
+
 const symbol = 'AMZN';
 const url = `https://alpha-vantage.p.rapidapi.com/query?symbol=${symbol}&outputsize=compact&function=TIME_SERIES_DAILY`;
 

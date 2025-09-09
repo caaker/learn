@@ -1,6 +1,6 @@
 /*
  *
- * Analysis
+ * Analysis - update this file to use a class
  *
 */
 
@@ -13,13 +13,10 @@ function DP(value, change, trendup, trenddown) {
   this.change = change;
   this.trendup = trendup;
   this.trenddown = trenddown;
-  
-  // currently only looking at the sign for random walk, not the change
   this.sign = Math.sign(change);
 }
 
-function analyze(arr) {
-  const change = [];
+function analyzeRandomWalk(arr) {
   for(let i = 1; i < arr.length; i++) {
     const change = (arr[i] - arr[i-1]).toFixed(4);
     let DPI = new DP(arr[i], change, 0, 0);
@@ -27,12 +24,12 @@ function analyze(arr) {
     if(!DPIA[i-1]) {
       continue;
     }
-    checkRandomWalk(i);
+    checkTrendDirection(i);
   }
   logResults();
 }
 
-function checkRandomWalk(i) {
+function checkTrendDirection(i) {
 
   // negative to positive || negative
   if(DPIA[i-1].sign === -1 && DPIA[i].sign === 1) {
@@ -60,4 +57,4 @@ function logResults() {
   console.log(trenddown);
 }
 
-module.exports = analyze;
+module.exports = analyzeRandomWalk;

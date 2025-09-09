@@ -16,12 +16,19 @@ function writeData(data) {
   writeStream.end();
 }
 
+
+// update to use a string before writing
 function writeArray(writeStream, data) {
   writeStream.write('const data = [');
   for (const day in data) {
+
+    // daily close
     const close = data[day]['4. close'];
+
+    // write the daily close to a file
     writeStream.write(close + ', ');
   }
+
   writeStream.write(']');
 }
 
