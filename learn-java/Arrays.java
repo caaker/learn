@@ -4,17 +4,17 @@ class Arrays {
         arrayDefaults();
     }
 
-    // arrays have default initial values
+    // Java auto-initializes array elements
     public static void arrayDefaults() {
 
-        // empty string
-        System.out.println("");
+        // Mark the start
+        System.out.println("Mark");
 
         // ints - 0
         int[] arr_int = new int[10];
         System.out.println(arr_int[0]);
 
-        // chars - default is the null character - <0x00>
+        // chars - empty string
         char[] arr_char = new char[10];
         System.out.println(arr_char[0]);
 
