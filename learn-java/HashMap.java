@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class Hash {
+public class HashMapClass {
   public static void main(String[] args) {
     HashMap<String, String> hashmap = new HashMap<>();
     hashmap.put("sky", "blue");

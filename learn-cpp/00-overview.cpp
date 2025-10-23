@@ -1,7 +1,6 @@
 /*
 
-Style Guide
-
+style guide
 https://google.github.io/styleguide/cppguide.html
 
 */
