@@ -9,11 +9,12 @@ print("")
 class MySuperClass():
 
     def __init__(self):
-        print("I'm a super constructor")
+        print("I'm a super class constructor")
 
     def superMethod(self):
-        print("I'm a super method")
+        print("I'm a super class method")
 
+# passing the super class in makes it so
 class MyClass(MySuperClass):
 
     # self is required to instantiate

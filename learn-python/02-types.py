@@ -1,10 +1,10 @@
-from collections.abc import Iterable
-
 print("")
 print("***************")
 print("types - common")
 print("***************")
 print("")
+
+from collections.abc import Iterable
 
 # an integer - <class 'int'>
 i1 = 4
@@ -50,7 +50,7 @@ dict1 = {'a': 0}
 print(type(dict1))
 
 # a set - <class 'set'>
-set1 = { 1, 2, 3 }
+set1 = {1, 2, 3}
 print(type(set1))
 
 
@@ -60,14 +60,14 @@ print("types - composite")
 print("***************")
 print("")
 
+
 # all true
 def compositeTypes():
   print(isinstance((1, 2, 'a', 'red'), tuple))
   print(isinstance([1, 2, 'a'], list))
-  print(isinstance({1, 2}, set))
+  print(isinstance({1, 2, 'a'}, set))
   print(isinstance({'a': 1, 'b': 2}, dict))
   print(isinstance([1, 2], Iterable))
-
 compositeTypes()
 
 print("")
@@ -83,7 +83,6 @@ def types():
   print(isinstance(float("1.0"), float))
   print(isinstance(True, bool))
   print(isinstance("string", str))
-
 types()
 
 print("")
