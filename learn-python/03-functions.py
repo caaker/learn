@@ -53,3 +53,17 @@ def function1():
   def f(x): return 2 * x
   print(f(2))
 function1()
+
+print("")
+print("***************")
+print("functions - args and kwargs")
+print("***************")
+print("")
+
+
+# positional arguments must come before keyword arguments
+def f(*args, **kwargs):
+    print(args, kwargs)
+
+# (1,2) {'y':4,'x':3}
+f(1,2, y=4, x=3)
