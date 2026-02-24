@@ -18,3 +18,6 @@ print("dy/dx =", x.grad)
 
 # reset x.grad
 x.grad.zero_()
+
+# prints 7.0
+print("dy/dx =", x.grad)
