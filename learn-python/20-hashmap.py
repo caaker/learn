@@ -4,6 +4,21 @@ print("hashmaps")
 print("***************")
 print("")
 
-hashmap = {}
-hashmap["1"] = "2"
-print("hashmap['1']", hashmap["1"])
+# create
+map1 = {
+    "name": "Joe",
+    "age": 58
+}
+
+# read
+print(map1["name"])
+
+# update or add
+map1["city"] = "Austin"
+
+# check key
+print("age" in map1)
+
+# iterate
+for key, value in map1.items():
+    print(key, value)
