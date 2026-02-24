@@ -4,9 +4,9 @@ print("controls - loops")
 print("***************")
 print("")
 
-numbers = [0, 1, 2, 3]
 
 # prints 0, 1, 2, 3
+numbers = [0, 1, 2, 3]
 for number in numbers:
   print(number)
 

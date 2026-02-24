@@ -9,7 +9,6 @@ print("")
 #
 
 # zip takes 2 or more iterables and produces a tuple
-
 a = [1,2]
 b = ['x','y']
 c = [True, False]
@@ -31,5 +30,6 @@ print(list(test))
 # generate squares of numbers 1 to 5
 squares = (x**2 for x in range(1, 6))
 
+# prints 1, 4, 9, 16, 25
 for sq in squares:
     print(sq)

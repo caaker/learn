@@ -22,10 +22,10 @@ class MyClass(MySuperClass):
 
         # calls constructor of the super class
         super().__init__()
-        print("I'm a constructor")
+        print("I'm a class constructor")
 
     def method(self):
-        print("I'm a method")
+        print("I'm a class method")
 
     def _private_method(self):
         print("This is intended to be a private method, but using an underscore is just convention")

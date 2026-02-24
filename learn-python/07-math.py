@@ -4,7 +4,11 @@ print("math")
 print("***************")
 print("")
 
+import math
 import random
+
+# your favorite math method
+print(math.sqrt(2))
 
 # seeding will cause random.uniform to always produce the same value
 # random.seed(42)

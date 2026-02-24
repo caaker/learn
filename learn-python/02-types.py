@@ -2,7 +2,6 @@ print("")
 print("***************")
 print("types - common")
 print("***************")
-print("")
 
 from collections.abc import Iterable
 
@@ -37,6 +36,8 @@ print("")
 
 # a tuple - <class 'tuple'>,
 tuple1 = (4, 2)
+
+# comma is required to make this a tuple, compare to above
 tuple2 = (4, )
 print(type(tuple1))
 print(type(tuple2))
@@ -53,37 +54,20 @@ print(type(dict1))
 set1 = {1, 2, 3}
 print(type(set1))
 
+# set along with many others is a child class of Iterable
+print('Is an iterable?', isinstance(set1, Iterable))
 
 print("")
 print("***************")
-print("types - composite")
+print("type - hints")
 print("***************")
 print("")
 
-
-# all true
-def compositeTypes():
-  print(isinstance((1, 2, 'a', 'red'), tuple))
-  print(isinstance([1, 2, 'a'], list))
-  print(isinstance({1, 2, 'a'}, set))
-  print(isinstance({'a': 1, 'b': 2}, dict))
-  print(isinstance([1, 2], Iterable))
-compositeTypes()
-
-print("")
-print("***************")
-print("types - common")
-print("***************")
-print("")
-
-# all true
-def types():
-  print(isinstance(1, int))
-  print(isinstance(1.0, float))
-  print(isinstance(float("1.0"), float))
-  print(isinstance(True, bool))
-  print(isinstance("string", str))
-types()
+# some people might use type hints for static file checking, ie not run time.
+def add(a: int, b: int) -> int:
+    return a + b
+result: int = add(2, 3)
+print(result)
 
 print("")
 print("***************")

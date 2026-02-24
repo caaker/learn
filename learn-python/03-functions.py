@@ -37,8 +37,8 @@ print("***************")
 print("")
 
 
-# input is s, return is s
-simpleLambda = lambda s: s
+# input is s, return is capital s
+simpleLambda = lambda s: s.upper()
 print(simpleLambda('a'))
 
 
