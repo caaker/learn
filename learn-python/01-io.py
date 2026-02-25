@@ -9,17 +9,16 @@ print("")
 import os as o
 
 # gather user input
-user = input()
+user = input("Enter your name: ")
 
 # create two strings
 word1 = 'Hello '
-word2 = "World."
+print (word1 + user)
 
 # list files in the current directory
 files = o.listdir('.')
 if files:
-    print(word1 + word2 +" The first file in your directory is: " + files[0])
-if user:
-    print("The user input is: " + user)
+    print("In the current directory files[0] is: " + files[0])
+
 
 

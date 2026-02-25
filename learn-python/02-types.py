@@ -2,6 +2,7 @@ print("")
 print("***************")
 print("types - common")
 print("***************")
+print("")
 
 from collections.abc import Iterable
 
@@ -10,7 +11,6 @@ i1 = 4
 i2 = (4) # looks like tuple, but is an integer
 print(type(i1))
 print(type(i2))
-
 
 # a float - <class 'float'>
 f = 4.0
@@ -55,7 +55,7 @@ set1 = {1, 2, 3}
 print(type(set1))
 
 # set along with many others is a child class of Iterable
-print('Is an iterable?', isinstance(set1, Iterable))
+print('Is set an iterable?', isinstance(set1, Iterable))
 
 print("")
 print("***************")
@@ -68,17 +68,3 @@ def add(a: int, b: int) -> int:
     return a + b
 result: int = add(2, 3)
 print(result)
-
-print("")
-print("***************")
-print("is")
-print("***************")
-print("")
-
-dict1 = {'a': 0}
-dict2 = dict1
-dict3 = {'a': 0}
-
-# prints True & False
-print(dict1 is dict2)
-print(dict1 is dict3)

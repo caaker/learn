@@ -18,6 +18,24 @@ print(words)           # words has not changed
 print(words1)
 print(words2)
 
-# common methods
+# common methods - append, pop
 words.append('fabio')
-print(words)           # words has not changed
+print(words)
+print(words.pop())
+print(words)
+
+# common methods - sort and sorted
+# use sorted if you want to create a new list
+words.sort()
+print(words)
+
+# common methods - remove
+words.remove('amelia')
+print(words)
+
+# list comprehension
+# [ <return> for <value> in <Iterable> ]
+nums = [1, 2, 3, 4]
+squares = [x**2 for x in nums]
+# squares → [1, 4, 9, 16]
+

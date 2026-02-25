@@ -4,7 +4,6 @@ print("controls - loops")
 print("***************")
 print("")
 
-
 # prints 0, 1, 2, 3
 numbers = [0, 1, 2, 3]
 for number in numbers:
@@ -23,7 +22,6 @@ matrix = [[0,1], [2,3]]
 flat_list = [number for row in matrix for number in row]
 print(flat_list)
 
-
 # prints 0, 1, 2, 3
 i = 0
 while i <= 3:
@@ -38,4 +36,3 @@ elif x == 0:
   print("Zero")
 else:
   print("Negative")
-

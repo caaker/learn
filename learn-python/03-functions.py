@@ -21,13 +21,13 @@ print("***************")
 print("")
 
 # special attributes
-def showSpecialAttributes(a = 1, b = 2):
+def special(a = 1, b = 2):
     """I am a docstring """
     # print("__name__:", __name__)
-    print(showSpecialAttributes.__doc__)
-    print(showSpecialAttributes.__defaults__)
-    # print(showSpecialAttributes.__code__)
-showSpecialAttributes()
+    print(special.__doc__)
+    print(special.__defaults__)
+    # print(special.__code__)
+special()
 
 
 print("")
