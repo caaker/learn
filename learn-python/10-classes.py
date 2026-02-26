@@ -1,9 +1,5 @@
-print("")
-print("***************")
-print("classes")
-print("***************")
-print("")
-
+print('classes')
+print('****************************************************************************************************')
 
 # python does not have access specifiers
 class MySuperClass():
@@ -28,7 +24,7 @@ class MyClass(MySuperClass):
         print("I'm a class method")
 
     def _private_method(self):
-        print("This is intended to be a private method, but using an underscore is just convention")
+        print('This is intended to be a private method, but using an underscore is just convention')
 
 Instance = MyClass()
 Instance.method()

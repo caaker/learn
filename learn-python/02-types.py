@@ -1,14 +1,16 @@
-print("")
-print("***************")
-print("types - common")
-print("***************")
-print("")
+print('types')
+print('****************************************************************************************************')
 
 from collections.abc import Iterable
 
+#
+# types - common
+#
+
 # an integer - <class 'int'>
+# both are integers
 i1 = 4
-i2 = (4) # looks like tuple, but is an integer
+i2 = (4)
 print(type(i1))
 print(type(i2))
 
@@ -28,11 +30,9 @@ print(type(b))
 c = 1 + 2j
 print(type(c))
 
-print("")
-print("***************")
-print("types - composite")
-print("***************")
-print("")
+#
+# types - composite
+#
 
 # a tuple - <class 'tuple'>,
 tuple1 = (4, 2)
@@ -57,11 +57,9 @@ print(type(set1))
 # set along with many others is a child class of Iterable
 print('Is set an iterable?', isinstance(set1, Iterable))
 
-print("")
-print("***************")
-print("type - hints")
-print("***************")
-print("")
+#
+# type - hints
+#
 
 # some people might use type hints for static file checking, ie not run time.
 def add(a: int, b: int) -> int:

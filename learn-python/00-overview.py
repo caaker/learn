@@ -1,10 +1,10 @@
-# there are 3 types of comments in python
+print("overview")
+print("****************************************************************************************************")
 
-#   type 1
-''' type 2 '''
-""" type 3 """
+# google provides a style guide
+#       location:  https://google.github.io/styleguide/pyguide.html
+#       - 4 spaces for indentation
+#       - snake case for function names
 
-'''
-style guide
-https://google.github.io/styleguide/pyguide.html
-'''
+# style
+#    by default use single quotes to reduce key strokes and screen pixel count

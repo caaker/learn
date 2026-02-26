@@ -1,10 +1,5 @@
-print("")
-print("***************")
-print("objects")
-print("***************")
-print("")
-
-# len
+print('objects')
+print('****************************************************************************************************')
 
 # is checks if two names point to the same object in memory
 dict1 = {'a': 0}
@@ -27,4 +22,3 @@ test = zip(a,b)
 print(test)
 # output is [(1,'x',True),(2,'y',False)]
 print(list(test))
-

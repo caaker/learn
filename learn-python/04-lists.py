@@ -1,8 +1,5 @@
-print("")
-print("***************")
-print("lists")
-print("***************")
-print("")
+print('lists')
+print('****************************************************************************************************')
 
 words = ['amelia', 'harper', 'evelyn', 'chris', 'james', 'brian']
 words1 = words[:2]     # index 0 to 1
@@ -32,11 +29,9 @@ nums = [1, 2, 3, 4]
 squares = [x**2 for x in nums]
 # squares → [1, 4, 9, 16]
 
-print("")
-print("***************")
-print("lists - generator objects")
-print("***************")
-print("")
+#
+# generator objects
+#
 
 # generate squares of numbers 1 to 5
 # this is a generator expression

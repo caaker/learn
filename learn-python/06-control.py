@@ -1,8 +1,5 @@
-print("")
-print("***************")
-print("controls - loops")
-print("***************")
-print("")
+print('control')
+print('****************************************************************************************************')
 
 # prints 0, 1, 2, 3
 numbers = [0, 1, 2, 3]
@@ -25,14 +22,14 @@ print(flat_list)
 # prints 0, 1, 2, 3
 i = 0
 while i <= 3:
-  print(i)
-  i += 1
+    print(i)
+    i += 1
 
 # prints Positive
 x = 10
 if x > 0:
-  print("Positive")
+    print('Positive')
 elif x == 0:
-  print("Zero")
+    print('Zero')
 else:
-  print("Negative")
+    print('Negative')

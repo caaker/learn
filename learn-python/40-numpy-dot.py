@@ -1,7 +1,6 @@
+print('numpy-dot')
+print('****************************************************************************************************')
 import numpy as np
-
-# sudo apt install python3-numpy
-# pip install numpy
 
 # Two vectors
 a = np.array([1, 2, 3])

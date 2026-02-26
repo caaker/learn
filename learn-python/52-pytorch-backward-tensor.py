@@ -1,8 +1,5 @@
-print("")
-print("***************")
-print("pytorch-backward-tensor")
-print("***************")
-print("")
+print('pytorch-backward-tensor')
+print('****************************************************************************************************')
 
 import torch
 
