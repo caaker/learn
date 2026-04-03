@@ -61,7 +61,8 @@ print('Is set an iterable?', isinstance(set1, Iterable))
 # type - hints
 #
 
-# some people might use type hints for static file checking, ie not run time.
+# some people might use type hints for static file checking
+# they are not enforced at run time
 def add(a: int, b: int) -> int:
     return a + b
 result: int = add(2, 3)

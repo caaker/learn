@@ -7,13 +7,13 @@ map1 = {
     'age': 58
 }
 
-# read
+# read - Joe
 print(map1['name'])
 
 # update or add
 map1['city'] = 'Austin'
 
-# check key
+# check key - True
 print('age' in map1)
 
 # iterate

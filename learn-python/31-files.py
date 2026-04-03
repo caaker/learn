@@ -6,7 +6,7 @@ output_file = 'combined.py'
 with open(output_file, 'w', encoding='utf-8') as outfile:
     for filename in sorted(os.listdir(".")):
         if os.path.isfile(filename) and filename != output_file:
-            with open(filename, 'r', encoding='utf-8') as infile:
-                outfile.write(infile.read())
+            with open(filename, 'r', encoding='utf-8') as current_file:
+                outfile.write(current_file.read())
 
 print("Done.")

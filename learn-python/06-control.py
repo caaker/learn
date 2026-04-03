@@ -7,14 +7,11 @@ for number in numbers:
   print(number)
 
 # prints 0, 1, 2, 3
-# if we don't need the a, by convention we can replace it with _
 for a in range(4):
   print(a)
 
-# this is a nested list comprehension
-# equivalent of an embedded for loop
-# outer loop is - 'for row in matrix'
-# inner loop is - 'for number in row'
+# this is a nested list comprehension; equivalent of an embedded for loop
+# outer loop is - 'for row in matrix'; inner loop is - 'for number in row'
 matrix = [[0,1], [2,3]]
 flat_list = [number for row in matrix for number in row]
 print(flat_list)

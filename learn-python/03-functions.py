@@ -31,7 +31,9 @@ function1()
 
 # positional arguments must come before keyword arguments
 def f(*args, **kwargs):
-    print(args, kwargs)
+    print(args)
+    print(kwargs)
 
-# (1,2) {'y':4,'x':3}
+# (1,2) 
+# {'y':4,'x':3}
 f(1,2, y=4, x=3)

@@ -20,6 +20,10 @@ print(food.capitalize())
 # common string methods - split
 a = 'a, b, c'
 b = a.split();
+
+# ['a', 'b', 'c']
 print(b)
 c = a.replace('a', 'z')
+
+# z, b, c
 print(c)

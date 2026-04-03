@@ -18,7 +18,9 @@ print(dict1 is dict3)
 a = [1,2]
 b = ['x','y']
 test = zip(a,b)
+
 # output is <zip object at 0x767ef7f77d80>
 print(test)
-# output is [(1,'x',True),(2,'y',False)]
+
+# output is [(1,'x'),(2,'y')]
 print(list(test))

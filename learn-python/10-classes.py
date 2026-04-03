@@ -10,7 +10,7 @@ class MySuperClass():
     def superMethod(self):
         print("I'm a super class method")
 
-# passing the super class in makes it so
+# pass the super class in
 class MyClass(MySuperClass):
 
     # self is required to instantiate

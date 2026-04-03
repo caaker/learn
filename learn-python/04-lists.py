@@ -23,8 +23,7 @@ print(words)
 words.remove('amelia')
 print(words)
 
-# list comprehension
-# [ <return> for <value> in <Iterable> ]
+# list comprehension - [ <return> for <value> in <Iterable> ]
 nums = [1, 2, 3, 4]
 squares = [x**2 for x in nums]
 # squares → [1, 4, 9, 16]
@@ -33,8 +32,7 @@ squares = [x**2 for x in nums]
 # generator objects
 #
 
-# generate squares of numbers 1 to 5
-# this is a generator expression
+# this is a generator expression; it generates squares of numbers 1 to 5
 squares = (x**2 for x in range(1, 6))
 
 # prints <generator object <genexpr> at 0x778a156d9e50>

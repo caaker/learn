@@ -10,11 +10,11 @@ y = x**2 + 3*x + 1
 # computes dy/dx and sets .grad for x
 y.backward()
 
-# prints 7.0
+# prints 7.
 print('dy/dx =', x.grad)
 
 # reset x.grad
 x.grad.zero_()
 
-# prints 7.0
+# prints 0.
 print('dy/dx =', x.grad)

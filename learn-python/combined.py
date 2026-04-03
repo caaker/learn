@@ -2,8 +2,9 @@ print("overview")
 print("****************************************************************************************************")
 
 # google provides a style guide
-#    location:  https://google.github.io/styleguide/pyguide.html
-#    - 4 spaces for indentation
+#       location:  https://google.github.io/styleguide/pyguide.html
+#       - 4 spaces for indentation
+#       - snake case for function names
 
 # style
 #    by default use single quotes to reduce key strokes and screen pixel countprint('io')
@@ -86,7 +87,8 @@ print('Is set an iterable?', isinstance(set1, Iterable))
 # type - hints
 #
 
-# some people might use type hints for static file checking, ie not run time.
+# some people might use type hints for static file checking
+# they are not enforced at run time
 def add(a: int, b: int) -> int:
     return a + b
 result: int = add(2, 3)
@@ -114,8 +116,8 @@ def special(a = 1, b = 2):
 special()
 
 # input is s, return is capital s
-simpleLambda = lambda s: s.upper()
-print(simpleLambda('a'))
+simple_lambda = lambda s: s.upper()
+print(simple_lambda('a'))
 
 def function1():
   def f(x): return 2 * x
@@ -124,9 +126,11 @@ function1()
 
 # positional arguments must come before keyword arguments
 def f(*args, **kwargs):
-    print(args, kwargs)
+    print(args)
+    print(kwargs)
 
-# (1,2) {'y':4,'x':3}
+# (1,2) 
+# {'y':4,'x':3}
 f(1,2, y=4, x=3)
 print('lists')
 print('****************************************************************************************************')
@@ -153,8 +157,7 @@ print(words)
 words.remove('amelia')
 print(words)
 
-# list comprehension
-# [ <return> for <value> in <Iterable> ]
+# list comprehension - [ <return> for <value> in <Iterable> ]
 nums = [1, 2, 3, 4]
 squares = [x**2 for x in nums]
 # squares → [1, 4, 9, 16]
@@ -163,8 +166,7 @@ squares = [x**2 for x in nums]
 # generator objects
 #
 
-# generate squares of numbers 1 to 5
-# this is a generator expression
+# this is a generator expression; it generates squares of numbers 1 to 5
 squares = (x**2 for x in range(1, 6))
 
 # prints <generator object <genexpr> at 0x778a156d9e50>
@@ -198,8 +200,12 @@ print(food.capitalize())
 # common string methods - split
 a = 'a, b, c'
 b = a.split();
+
+# ['a', 'b', 'c']
 print(b)
 c = a.replace('a', 'z')
+
+# z, b, c
 print(c)
 print('control')
 print('****************************************************************************************************')
@@ -210,14 +216,11 @@ for number in numbers:
   print(number)
 
 # prints 0, 1, 2, 3
-# if we don't need the a, by convention we can replace it with _
 for a in range(4):
   print(a)
 
-# this is a nested list comprehension
-# equivalent of an embedded for loop
-# outer loop is - 'for row in matrix'
-# inner loop is - 'for number in row'
+# this is a nested list comprehension; equivalent of an embedded for loop
+# outer loop is - 'for row in matrix'; inner loop is - 'for number in row'
 matrix = [[0,1], [2,3]]
 flat_list = [number for row in matrix for number in row]
 print(flat_list)
@@ -272,9 +275,11 @@ print(dict1 is dict3)
 a = [1,2]
 b = ['x','y']
 test = zip(a,b)
+
 # output is <zip object at 0x767ef7f77d80>
 print(test)
-# output is [(1,'x',True),(2,'y',False)]
+
+# output is [(1,'x'),(2,'y')]
 print(list(test))
 print('classes')
 print('****************************************************************************************************')
@@ -288,7 +293,7 @@ class MySuperClass():
     def superMethod(self):
         print("I'm a super class method")
 
-# passing the super class in makes it so
+# pass the super class in
 class MyClass(MySuperClass):
 
     # self is required to instantiate
@@ -344,13 +349,13 @@ map1 = {
     'age': 58
 }
 
-# read
+# read - Joe
 print(map1['name'])
 
 # update or add
 map1['city'] = 'Austin'
 
-# check key
+# check key - True
 print('age' in map1)
 
 # iterate
@@ -372,8 +377,8 @@ output_file = 'combined.py'
 with open(output_file, 'w', encoding='utf-8') as outfile:
     for filename in sorted(os.listdir(".")):
         if os.path.isfile(filename) and filename != output_file:
-            with open(filename, 'r', encoding='utf-8') as infile:
-                outfile.write(infile.read())
+            with open(filename, 'r', encoding='utf-8') as current_file:
+                outfile.write(current_file.read())
 
 print("Done.")
 print('numpy-dot')
@@ -384,7 +389,7 @@ import numpy as np
 a = np.array([1, 2, 3])
 b = np.array([4, 5, 6])
 
-# Dot product, output is 32
+# Dot product, output is 1*4 + 2*5 + 3*6 = 32
 dot = np.dot(a, b)
 print(dot)
 print('numpy-matrix')
@@ -424,8 +429,10 @@ import torch
 x = torch.tensor([1.0, 2.0, 3.0])
 y = torch.tensor([4.0, 5.0, 6.0])
 z = x + y
+
 # z = tensor([5., 7., 9.])
 print('z =', z)
+
 # z = [5.0, 7.0, 9.0]
 print('z =', z.tolist())
 
@@ -433,9 +440,9 @@ print('z =', z.tolist())
 a = torch.zeros((2, 2))
 b = torch.ones((2, 2))
 c = a + b
+
 # c = [[1.0, 1.0], [1.0, 1.0]]
-print('c =', c.tolist())
-print('pytorch-backward-scalar')
+print('c =', c.tolist())print('pytorch-backward-scalar')
 print('****************************************************************************************************')
 
 import torch
@@ -447,32 +454,30 @@ y = x**2 + 3*x + 1
 # computes dy/dx and sets .grad for x
 y.backward()
 
-# prints 7.0
+# prints 7.
 print('dy/dx =', x.grad)
 
 # reset x.grad
 x.grad.zero_()
 
-# prints 7.0
+# prints 0.
 print('dy/dx =', x.grad)
 print('pytorch-backward-tensor')
 print('****************************************************************************************************')
 
 import torch
-
-# unpack this
 v = torch.tensor([1.0, 2.0, 3.0], requires_grad=True)
 f = v**2 + 3*v + 1
 # df/dv = 2*v + 3
 
+# outpus is: 5 + 11 + 19 = 35
 f_sum = f.sum()
 print(f_sum)
 
+# output leaves off trailing 0 by default - [5.0, 7.0, 9.0]
 f_sum.backward()
-
-# output leaves off trailing 0 by default
-# [5., 7., 9.]
 print("df/dv =", v.grad)
+
 print('cirq-hadamard gate')
 print('****************************************************************************************************')
 
@@ -484,8 +489,7 @@ qbit = cirq.LineQubit(0)
 # creates a quantum circuit ( a series of quantum operations )
 circuit = cirq.Circuit(
 
-  # applies the Hadamard gate to the qbit
-  # putting it into a superposition of |0> and |1>
+  # applies the Hadamard gate to the qbit, putting it into a superposition of |0> and |1>
   cirq.H(qbit),
 
   # measures qbit and and stores the result in a classical bit `q0`
@@ -498,11 +502,8 @@ sim = cirq.Simulator()
 # executes the quantum circuit repetitively and stores the result
 result = sim.run(circuit, repetitions=1024)
 
-# 1 output is Counter({1: 537, 0: 487})
+# one output is Counter({1: 537, 0: 487})
 print(result.histogram(key='q0'))
-# module.py
-
-# controls what is exported with -> from module import *
 # without it, all modules with out an _ are imported
 # only add is imported from below
 
