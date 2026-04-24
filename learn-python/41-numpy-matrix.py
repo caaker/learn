@@ -10,7 +10,7 @@ A = np.array([[1, 2, 3],
 # Vector (length 3)
 v = np.array([7, 8, 9])
 
-# Matrix-vector multiplication
+# Matrix-vector multiplication: [50, 122]
 result = np.dot(A, v)
 print(result)
 

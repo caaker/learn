@@ -23,7 +23,7 @@ b = a.split();
 
 # ['a', 'b', 'c']
 print(b)
-c = a.replace('a', 'z')
 
 # z, b, c
+c = a.replace('a', 'z')
 print(c)

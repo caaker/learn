@@ -14,7 +14,7 @@ print(words)
 print(words.pop())
 print(words)
 
-# common methods - sort and sorted
+# common methods - sort
 # use sorted if you want to create a new list
 words.sort()
 print(words)

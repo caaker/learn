@@ -13,4 +13,6 @@ print(random.uniform(-1,1))
 
 # sums up an iterable with an optional default value
 print(sum([1.5, 2.5], 1))
+
+# yes
 print(abs(-5))

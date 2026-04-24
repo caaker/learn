@@ -1,4 +1,4 @@
-print('classes-self')
+print('classes-add')
 print('****************************************************************************************************')
 
 class Point:
@@ -18,10 +18,10 @@ p2 = Point(3, 4)
 
 # self = p1, other = p2
 p3 = p1.add(p2)
-
-# prints 4 and 6
 print(p3.x, p3.y)  
 
 # uses __add__
 p4 = p1 + p2
 print(p4.x, p4.y)
+
+# both print 4 and 6

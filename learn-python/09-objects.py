@@ -14,7 +14,7 @@ print(dict1 is dict3)
 # iterable objects - zip
 #
 
-# zip takes 2 or more iterables and produces a tuple
+# zip takes 2 or more iterables
 a = [1,2]
 b = ['x','y']
 test = zip(a,b)

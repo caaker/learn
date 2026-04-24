@@ -3,13 +3,13 @@ print('*************************************************************************
 
 import cirq
 
-# place a single qbit named 'q' on a 1D line at index 0
+# place a single qbit named 'qbit' on a 1D line at index 0
 qbit = cirq.LineQubit(0)
 
 # creates a quantum circuit ( a series of quantum operations )
 circuit = cirq.Circuit(
 
-  # applies the Hadamard gate to the qbit, putting it into a superposition of |0> and |1>
+  # applies the Hadamard gate to the qbit, putting it into a superposition
   cirq.H(qbit),
 
   # measures qbit and and stores the result in a classical bit `q0`

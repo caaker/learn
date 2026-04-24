@@ -1,6 +1,4 @@
-# without it, all modules with out an _ are imported
-# only add is imported from below
-
+# this only effects the wild card import - from module import *
 __all__ = ["add"]
 
 def add(a, b):
@@ -9,5 +7,6 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
-def _helper():
-    return "internal use"
+# using undersocre is only convention but the function is still imported
+def _multiply(a, b):
+    return a * b

@@ -404,7 +404,7 @@ A = np.array([[1, 2, 3],
 # Vector (length 3)
 v = np.array([7, 8, 9])
 
-# Matrix-vector multiplication
+# Matrix-vector multiplication: [50, 122]
 result = np.dot(A, v)
 print(result)
 
@@ -425,23 +425,19 @@ import torch
 # not all systems have accessible GPUs
 # print(torch.cuda.is_available())
 
-# tensors - add vectors
+# tensors - add vectors: z = tensor([5., 7., 9.])
 x = torch.tensor([1.0, 2.0, 3.0])
 y = torch.tensor([4.0, 5.0, 6.0])
 z = x + y
-
-# z = tensor([5., 7., 9.])
 print('z =', z)
 
 # z = [5.0, 7.0, 9.0]
 print('z =', z.tolist())
 
-# tensors - zeros, ones, add matrices
+# tensors - zeros, ones, add matrices : # c = [[1.0, 1.0], [1.0, 1.0]]
 a = torch.zeros((2, 2))
 b = torch.ones((2, 2))
 c = a + b
-
-# c = [[1.0, 1.0], [1.0, 1.0]]
 print('c =', c.tolist())print('pytorch-backward-scalar')
 print('****************************************************************************************************')
 
@@ -470,11 +466,11 @@ v = torch.tensor([1.0, 2.0, 3.0], requires_grad=True)
 f = v**2 + 3*v + 1
 # df/dv = 2*v + 3
 
-# outpus is: 5 + 11 + 19 = 35
+# outpus is 5 + 11 + 19 = 35 : tensor(35. grad_fn=<SumBackwarr0>)
 f_sum = f.sum()
 print(f_sum)
 
-# output leaves off trailing 0 by default - [5.0, 7.0, 9.0]
+# output is: tensor([5., 7., 9.])
 f_sum.backward()
 print("df/dv =", v.grad)
 
@@ -483,13 +479,13 @@ print('*************************************************************************
 
 import cirq
 
-# place a single qbit named 'q' on a 1D line at index 0
+# place a single qbit named 'qbit' on a 1D line at index 0
 qbit = cirq.LineQubit(0)
 
 # creates a quantum circuit ( a series of quantum operations )
 circuit = cirq.Circuit(
 
-  # applies the Hadamard gate to the qbit, putting it into a superposition of |0> and |1>
+  # applies the Hadamard gate to the qbit, putting it into a superposition
   cirq.H(qbit),
 
   # measures qbit and and stores the result in a classical bit `q0`
